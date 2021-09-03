@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latitude e longitude</title>
+        <style>
+            .gfg {
+                font-size:40px;
+                font-weight:bold;
+                color:#000100;
+                margin-left:50px;
+            }
+            .NULL {
+                margin-left:150px;
+            }
+            p {
+                font-size:20px;
+                margin-left:20px;
+            }
+        </style>
+    </head>
+     
+    <body>
+        <div class = "gfg">RGH</div>
+         
+<p>Localização</p>
+ 
+        <button class = "NULL" onclick="getlocation()">Click</button>
+        <p id="demo1"></p>
+ 
+        <script>
+        var variable1 = document.getElementById("demo1");
+        function getlocation(){
+                navigator.geolocation.getCurrentPosition(showLoc);
+        }
+        function showLoc(pos){
+                variable1.innerHTML = "Latitude: " + pos.coords.latitude +
+                "<br>Longitude: " + pos.coords.longitude;
+            }
+        </script>
+    </body>
+</html>             
